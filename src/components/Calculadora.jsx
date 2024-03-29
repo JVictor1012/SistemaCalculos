@@ -36,6 +36,7 @@ export const Calculadora = () =>{
 
     return(
         <>
+        <h1>Calculadora de Salário</h1>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formGroupSalario">
                 <Form.Label>Valor Sarlário/Hora</Form.Label>

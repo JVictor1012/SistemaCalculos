@@ -5,6 +5,8 @@ import calculadora from "../assets/calculadora.jpg"
 import analise from "../assets/analise.jpg"
 import fibonacci from "../assets/fibonacci.jpg"
 
+import { Link } from 'react-router-dom';
+
 
 export const Cards = () =>{
     return(
@@ -20,7 +22,9 @@ export const Cards = () =>{
                                 <Card.Text>
                                     Calcula o salário de um empregado horista com base nas horas trabalhadas
                                 </Card.Text>
+                                <Link to='/calculadora'>
                                 <Button variant="primary">Acessar Função</Button>
+                                </Link>
                             </Card.Body>
                         </Card>
                     </div>
