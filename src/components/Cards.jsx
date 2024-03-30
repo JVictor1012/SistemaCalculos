@@ -39,7 +39,9 @@ export const Cards = () =>{
                                 <Card.Text>
                                     Analisa uma sequência de números, exibindo o menor e o maior valor.
                                 </Card.Text>
+                                <Link to='/analise'>
                                 <Button variant="primary">Acessar Função</Button>
+                                </Link>
                             </Card.Body>
                         </Card>
                     </div>

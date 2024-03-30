@@ -1,5 +1,8 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import { Container, Row, Col } from 'react-bootstrap';
+
 import { useState } from 'react';
 
 export const Calculadora = () =>{
@@ -35,31 +38,40 @@ export const Calculadora = () =>{
     }
 
     return(
-        <>
-        <h1>Calculadora de Salário</h1>
-        <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formGroupSalario">
-                <Form.Label>Valor Sarlário/Hora</Form.Label>
-                <Form.Control type="text"  value={salarioHora} onChange={(e) => setSalarioHora(e.target.value)}/>
-            </Form.Group>
+        <Container>
+            <Row className="justify-content-center">
+                <Col md={6}>
+                    <h1>Calculadora de Salário</h1>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3" controlId="formGroupSalario">
+                            <Form.Label>Valor Salário/Hora</Form.Label>
+                            <Form.Control type="text" value={salarioHora} onChange={(e) => setSalarioHora(e.target.value)} />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGroupHoras">
-                <Form.Label>Horas Trabalhadas</Form.Label>
-                <Form.Control type="text"  value={horasTrabalhadas} onChange={(e) => setHorasTrabalhadas(e.target.value)} />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formGroupHoras">
+                            <Form.Label>Horas Trabalhadas</Form.Label>
+                            <Form.Control type="text" value={horasTrabalhadas} onChange={(e) => setHorasTrabalhadas(e.target.value)} />
+                        </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formGroupQntFilhos">
-                <Form.Label>Quantidade de Filhos menores de 14 anos</Form.Label>
-                <Form.Control type="text"  value={qntFilhos} onChange={(e) => setQntFilhos(e.target.value)} />
-            </Form.Group>
+                        <Form.Group className="mb-3" controlId="formGroupQntFilhos">
+                            <Form.Label>Quantidade de Filhos menores de 14 anos</Form.Label>
+                            <Form.Control type="text" value={qntFilhos} onChange={(e) => setQntFilhos(e.target.value)} />
+                        </Form.Group>
 
-            <Button variant="success" type="submit">
-                Calcular
-            </Button>
-        </Form>
-        <div className='resultado'>{resultado}
-        </div>
-        </>
+                        <Button variant="success" type="submit">
+                            Calcular
+                        </Button>
+                    </Form>
+                </Col>
+            </Row>
+            <Row className="justify-content-center">
+                <Col md={6}>
+                    <Card style={{ margin: '15px'}}>
+                        <Card.Body>{resultado}</Card.Body>
+                    </Card>
+                </Col>
+            </Row>
+        </Container>
     )
     
 } 
