@@ -56,7 +56,9 @@ export const Cards = () =>{
                                 <Card.Text>
                                     Gera os primeiros N números da sequência de Fibonacci e indica se um valor N está na sequência.
                                 </Card.Text>
+                                <Link to='/fibonacci'>
                                 <Button variant="primary">Acessar Função</Button>
+                                </Link>
                             </Card.Body>
                         </Card>
                     </div>

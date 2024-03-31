@@ -21,9 +21,9 @@ export const NavBar = () => {
             <NavDropdown title="Funções" id="basic-nav-dropdown">
 
 
-            <Link to='/calculadora'><NavDropdown.Item href="#action/1">1. Calculadora de Salário</NavDropdown.Item></Link>
-            <Link to='/analise'><NavDropdown.Item href="#action/2">2. Análise Numérica</NavDropdown.Item></Link>
-            <NavDropdown.Item href="#action/3">3. Fibonacci</NavDropdown.Item>
+            <Link to='/calculadora'><NavDropdown.Item href="#calculadora">1. Calculadora de Salário</NavDropdown.Item></Link>
+            <Link to='/analise'><NavDropdown.Item href="#analise">2. Análise Numérica</NavDropdown.Item></Link>
+            <Link to='/fibonacci'><NavDropdown.Item href="#fibonacci">3. Fibonacci</NavDropdown.Item></Link>
 
             </NavDropdown>
           </Nav>
