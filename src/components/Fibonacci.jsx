@@ -12,13 +12,19 @@ export const Fibonacci = () => {
         const n = parseInt(valorN)
 
         const gerarSequencia = (n) => {
-            let sequencia = [1, 1]
-    
-            for (let i = 2; i < n; i++) {
-                sequencia.push(sequencia[i - 1] + sequencia[i - 2])
+            let sequencia = [1, 1, 2]
+        
+            for (let i = 3; i < n; i++) {
+                if (sequencia[i - 1] % 2 === 0) {  
+                    sequencia.push(sequencia[i - 1] + sequencia[i - 2] + sequencia[i - 3])
+                
+                } else {
+                    sequencia.push(sequencia[i - 1] + sequencia[i - 2])
+                }
             }
             return sequencia;
         }
+        
 
         const verificarSeq = (n, sequenciaFibonacci) => {
             if (sequenciaFibonacci.includes(n)){

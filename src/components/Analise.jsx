@@ -15,6 +15,7 @@ export const Analise = () =>{
         e.preventDefault();
 
         const numeros = sequencia.split(' ').map(num => parseFloat(num));
+
         if (numeros.length !== parseInt(qntNumeros)) {
             setResultado(`ERRO! Sua sequência deve conter exatamente ${qntNumeros} numeros.`);
             return;
@@ -22,8 +23,11 @@ export const Analise = () =>{
 
         const menor = Math.min(...numeros);
         const maior = Math.max(...numeros);
+        
+        const segundo_maior = (numeros.filter((numeros) => (numeros < maior)))
+        const segundo_maiorFinal = Math.max(...segundo_maior)
 
-        setResultado(`Menor número: ${menor}, Maior numero: ${maior}`);
+        setResultado(`Menor número: ${menor}, Maior numero: ${maior}, segundo maior número: ${segundo_maiorFinal}`);
     }
 
     return(

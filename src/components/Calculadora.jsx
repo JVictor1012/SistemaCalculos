@@ -17,7 +17,9 @@ export const Calculadora = () =>{
 
         const salarioHoraNumber = parseFloat(salarioHora)
         const horasTrabalhadasNumber = parseFloat(horasTrabalhadas)
-        const qntFilhosNumber = parseFloat(qntFilhos)
+        const qntFilhosNumber = parseInt(qntFilhos)
+
+        
 
         const salarioBruto = salarioHoraNumber * horasTrabalhadasNumber;
         
@@ -34,7 +36,17 @@ export const Calculadora = () =>{
 
         const salarioLiquido = salarioBruto + salarioFamilia
 
-        setResultado(`Salario Bruto: R$ ${salarioBruto.toFixed(2)}, Salario Familia: R$ ${salarioFamilia.toFixed(2)}, Salario Líquido: R$ ${salarioLiquido.toFixed(2)}`)
+        if (qntFilhos % 1 === 0){
+            setResultado(`Salario Bruto: R$ ${salarioBruto.toFixed(2)}, Salario Familia: R$ ${salarioFamilia.toFixed(2)}, Salario Líquido: R$ ${salarioLiquido.toFixed(2)}`)
+        }if (qntFilhos % 1 !== 0){
+            setResultado('Entrada Invalida')
+        }if (salarioHoraNumber < 0){
+            setResultado("Salario/hora deve ser maior que 0!")
+        }if (horasTrabalhadasNumber < 0){
+            setResultado("Horas trabalhadas deve ser maior que 0!")
+        }
+                    
+        
     }
 
     return(
